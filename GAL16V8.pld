@@ -1,0 +1,50 @@
+Name     SXEGS ;
+PartNo   00 ;
+Date     2022-06-07 ;
+Revision 01 ;
+Designer GienekP ;
+Company   ;
+Assembly None ;
+Location  ;
+Device   g16v8as;
+
+/* *************** INPUT PINS *********************/
+PIN 1  = F2;
+PIN 2  = RW;
+PIN 3  = nCCTL;
+PIN 4  = D7;
+PIN 5  = nS4;
+PIN 6  = In6;
+PIN 7  = In7;
+PIN 8  = In8;
+PIN 9  = In9;
+PIN 11 = En;
+PIN 19 = nS5;
+
+/* *************** OUTPUT PINS *********************/
+PIN 12 = LATCH;
+PIN 13 = OE;
+PIN 14 = CE;
+PIN 15 = WE;
+PIN 16 = T;
+PIN 17 = H;
+PIN 18 = RD;
+
+/* ****************** LOGIC ************************/
+WE     = 'b'1;
+OE     = 'b'0;
+T      = 'b'0;
+
+CE     = ( nS4 & nS5 );
+
+nF2    = ( !F2 );
+nRW    = ( !RW );
+CCTL  = ( !nCCTL );
+LATCH  = !( CCTL & nRW & nF2 ) ;
+trig	= !( CCTL & nRW & F2 ) ;
+
+a      = ( trig # D7 );
+b      = ( trig # ( !D7 ) );
+H      = ( ( ( !a ) & b ) # ( H & b ) );
+RD     = H;
+

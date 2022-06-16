@@ -1,0 +1,64 @@
+LISTING FOR LOGIC DESCRIPTION FILE: GAL16V8.pld                      Page 1
+
+CUPL(WM): Universal Compiler for Programmable Logic
+Version 5.0a Serial# 60008009
+Copyright (c) 1983, 1998 Logical Devices, Inc.
+Created Thu Jun 16 14:22:55 2022
+
+  1:Name     SXEGS ;
+  2:PartNo   00 ;
+  3:Date     2022-06-07 ;
+  4:Revision 01 ;
+  5:Designer GienekP ;
+  6:Company   ;
+  7:Assembly None ;
+  8:Location  ;
+  9:Device   g16v8as;
+ 10:
+ 11:/* *************** INPUT PINS *********************/
+ 12:PIN 1  = F2;
+ 13:PIN 2  = RW;
+ 14:PIN 3  = nCCTL;
+ 15:PIN 4  = D7;
+ 16:PIN 5  = nS4;
+ 17:PIN 6  = In6;
+ 18:PIN 7  = In7;
+ 19:PIN 8  = In8;
+ 20:PIN 9  = In9;
+ 21:PIN 11 = En;
+ 22:PIN 19 = nS5;
+ 23:
+ 24:/* *************** OUTPUT PINS *********************/
+ 25:PIN 12 = LATCH;
+ 26:PIN 13 = OE;
+ 27:PIN 14 = CE;
+ 28:PIN 15 = WE;
+ 29:PIN 16 = T;
+ 30:PIN 17 = H;
+ 31:PIN 18 = RD;
+ 32:
+ 33:/* ****************** LOGIC ************************/
+ 34:WE     = 'b'1;
+ 35:OE     = 'b'0;
+ 36:T      = 'b'0;
+ 37:
+ 38:CE     = ( nS4 & nS5 );
+ 39:
+ 40:nF2    = ( !F2 );
+ 41:nRW    = ( !RW );
+ 42:CCTL  = ( !nCCTL );
+ 43:LATCH  = !( CCTL & nRW & nF2 ) ;
+ 44:trig    = !( CCTL & nRW & F2 ) ;
+ 45:
+ 46:a      = ( trig # D7 );
+ 47:b      = ( trig # ( !D7 ) );
+ 48:H      = ( ( ( !a ) & b ) # ( H & b ) );
+ 49:RD     = H;
+ 50:
+ 51:
+ 52:
+
+
+
+Jedec Fuse Checksum       (2a73)
+Jedec Transmit Checksum   (af77)

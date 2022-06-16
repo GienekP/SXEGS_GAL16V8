@@ -1,0 +1,112 @@
+
+*******************************************************************************
+                                     SXEGS
+*******************************************************************************
+
+CUPL(WM)        5.0a Serial# 60008009
+Device          g16v8as  Library DLIB-h-40-2
+Created         Thu Jun 16 14:22:55 2022
+Name            SXEGS 
+Partno          00 
+Revision        01 
+Date            2022-06-07 
+Designer        GienekP 
+Company         
+Assembly        None 
+Location        
+
+===============================================================================
+                            Expanded Product Terms
+===============================================================================
+
+CCTL =>
+    !nCCTL
+
+CE =>
+    nS4 & nS5
+
+H =>
+    !D7 & F2 & !RW & !nCCTL
+  # !D7 & H
+  # H & nCCTL
+  # H & RW
+  # !F2 & H
+
+LATCH =>
+    !F2 & !RW & !nCCTL
+
+OE =>
+    0 
+
+RD =>
+    H
+
+T =>
+    0 
+
+WE =>
+    1 
+
+a =>
+    nCCTL
+  # RW
+  # !F2
+  # D7
+
+b =>
+    nCCTL
+  # RW
+  # !F2
+  # !D7
+
+nF2 =>
+    !F2
+
+nRW =>
+    !RW
+
+trig =>
+    nCCTL
+  # RW
+  # !F2
+
+
+===============================================================================
+                                 Symbol Table
+===============================================================================
+
+Pin Variable                                    Pterms   Max     Min    
+Pol   Name              Ext     Pin     Type     Used   Pterms  Level   
+--- --------            ---     ---     ----    ------  ------  -----   
+
+    CCTL                        0        I        1       -       -     
+    CE                          14       V        1       8       0     
+    D7                          4        V        -       -       -     
+    En                          11       V        -       -       -     
+    F2                          1        V        -       -       -     
+    H                           17       V        5       8       0     
+    In6                         6        V        -       -       -     
+    In7                         7        V        -       -       -     
+    In8                         8        V        -       -       -     
+    In9                         9        V        -       -       -     
+    LATCH                       12       V        1       8       0     
+    OE                          13       V        1       8       0     
+    RD                          18       V        1       8       0     
+    RW                          2        V        -       -       -     
+    T                           16       V        1       8       0     
+    WE                          15       V        1       8       0     
+    a                           0        I        4       -       -     
+    b                           0        I        4       -       -     
+    nCCTL                       3        V        -       -       -     
+    nF2                         0        I        1       -       -     
+    nRW                         0        I        1       -       -     
+    nS4                         5        V        -       -       -     
+    nS5                         19       V        -       -       -     
+    trig                        0        I        3       -       -     
+
+
+LEGEND    D : default variable         F : field      G : group
+          I : intermediate variable    N : node       M : extended node
+          U : undefined                V : variable   X : extended variable
+          T : function
+

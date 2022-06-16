@@ -1,0 +1,77 @@
+%SIGNAL
+PIN  14 =  CE 
+PIN   4 =  D7 
+PIN  11 =  En 
+PIN   1 =  F2 
+PIN  17 =  H 
+PIN   6 =  In6 
+PIN   7 =  In7 
+PIN   8 =  In8 
+PIN   9 =  In9 
+PIN  12 =  LATCH 
+PIN  13 =  OE 
+PIN  18 =  RD 
+PIN   2 =  RW 
+PIN  16 =  T 
+PIN  15 =  WE 
+PIN   3 =  nCCTL 
+PIN   5 =  nS4 
+PIN  19 =  nS5 
+%END
+
+%FIELD
+%END
+
+%EQUATION
+CCTL =>
+    !nCCTL
+
+CE =>
+    nS4 & nS5
+
+H =>
+    !D7 & F2 & !RW & !nCCTL
+  # !D7 & H
+  # H & nCCTL
+  # H & RW
+  # !F2 & H
+
+LATCH =>
+    !F2 & !RW & !nCCTL
+
+OE =>
+    0 
+
+RD =>
+    H
+
+T =>
+    0 
+
+WE =>
+    1 
+
+a =>
+    nCCTL
+  # RW
+  # !F2
+  # D7
+
+b =>
+    nCCTL
+  # RW
+  # !F2
+  # !D7
+
+nF2 =>
+    !F2
+
+nRW =>
+    !RW
+
+trig =>
+    nCCTL
+  # RW
+  # !F2
+
+%END

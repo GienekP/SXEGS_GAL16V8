@@ -1,0 +1,36 @@
+# Berkeley PLA format generated using
+#
+# CUPL(WM)        5.0a Serial# 60008009
+# Device          g16v8as  Library DLIB-h-40-2
+# Created         Thu Jun 16 14:22:55 2022
+# Name            SXEGS 
+# Partno          00 
+# Revision        01 
+# Date            2022-06-07 
+# Designer        GienekP 
+# Company         
+# Assembly        None 
+# Location        
+#
+# Inputs  0 1 CE D7 
+#         En F2 H In6 
+#         In7 In8 In9 LATCH 
+#         OE RD RW T 
+#         WE nCCTL nS4 nS5 
+# Outputs CE H !LATCH OE 
+#         RD T WE 
+.i 20
+.o 7
+.p 11
+------------------11 1~~~~~~
+---0-1--------0--0-- ~1~~~~~
+---0--1------------- ~1~~~~~
+------1----------1-- ~1~~~~~
+------1-------1----- ~1~~~~~
+-----01------------- ~1~~~~~
+-----0--------0--0-- ~~1~~~~
+1------------------- ~~~1~~~
+------1------------- ~~~~1~~
+1------------------- ~~~~~1~
+-1------------------ ~~~~~~1
+.end

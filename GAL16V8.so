@@ -1,0 +1,101 @@
+CSIM(WM): CUPL Simulation Program
+Version 5.0a Serial# 
+Copyright (c) 1983, 1998 Logical Devices, Inc.
+CREATED Thu Jun 16 14:23:02 2022
+
+LISTING FOR SIMULATION FILE: GAL16V8.si
+
+   1: Name     SXEGS;
+   2: PartNo   00;
+   3: Date     2022-06-07;
+   4: Revision 01;
+   5: Designer GienekP;
+   6: Company  ;
+   7: Assembly None;
+   8: Location ;
+   9: Device   g16v8as;
+  10: 
+  11: 
+  12: ORDER: En, F2, RW, OE, LATCH, nCCTL, D7, nS4, nS5, RD, CE; 
+  13: 
+  14: 
+
+====================
+          Ln        
+          AC        
+          TC nn     
+      EFROCTDSSRC   
+      n2WEHL745DE   
+====================
+0001: 001LH1111XH
+               ^
+[0020sa] unstable output:  RD
+[0020sa] unstable output:  RD
+
+0002: 011LH1101XL
+               ^
+[0020sa] unstable output:  RD
+[0020sa] unstable output:  RD
+
+0003: 001LH1101XL
+               ^
+[0020sa] unstable output:  RD
+[0020sa] unstable output:  RD
+
+0004: 010LH1001XL
+               ^
+[0020sa] unstable output:  RD
+[0020sa] unstable output:  RD
+
+0005: 000LH1001XL
+               ^
+[0020sa] unstable output:  RD
+[0020sa] unstable output:  RD
+
+0006: 011LH1110XL
+               ^
+[0020sa] unstable output:  RD
+[0020sa] unstable output:  RD
+
+0007: 001LH1110XL
+               ^
+[0020sa] unstable output:  RD
+[0020sa] unstable output:  RD
+
+0008: 010LH1110XL
+               ^
+[0020sa] unstable output:  RD
+[0020sa] unstable output:  RD
+
+0009: 000LH1110XL
+               ^
+[0020sa] unstable output:  RD
+[0020sa] unstable output:  RD
+
+0010: 011LH1111XH
+               ^
+[0020sa] unstable output:  RD
+[0020sa] unstable output:  RD
+
+0011: 001LH1111XH
+               ^
+[0020sa] unstable output:  RD
+[0020sa] unstable output:  RD
+
+0012: 011LH0111XH
+               ^
+[0020sa] unstable output:  RD
+[0020sa] unstable output:  RD
+
+0013: 001LH0111XH
+               ^
+[0020sa] unstable output:  RD
+[0020sa] unstable output:  RD
+
+0014: 010LH0011HH
+0015: 000LL0011HH
+0016: 011LH0111HH
+0017: 001LH0111HH
+0018: 010LH0111LH
+0019: 000LL0111LH
+0020: 011LH1111LH
